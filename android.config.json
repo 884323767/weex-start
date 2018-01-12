@@ -1,6 +1,6 @@
 {
-  "AppName":"start",
-  "AppId":"com.demo.start",
+  "AppName":"start-d",
+  "AppId":"com.demo.startd",
   "SplashText":"Start\nWeex",
   "WeexBundle":"index.js"
 }

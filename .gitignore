@@ -41,5 +41,6 @@ captures/
 node_modules/
 dist/
 
+Pods/
 
 .idea/

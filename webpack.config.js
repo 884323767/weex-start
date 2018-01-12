@@ -83,7 +83,9 @@ const plugins = [
 // Config for compile jsbundle for web.
 const webConfig = {
   context: pathTo.join(__dirname, ''),
-  entry: entry,
+  // 原本好像是多文件入口写法，暂时写死
+  // entry: entry,
+  entry: pathTo.resolve('src', 'main.js'),
   output: {
     path: pathTo.join(__dirname, 'dist'),
     filename: '[name].web.js'

@@ -7,9 +7,9 @@
     "start": "npm run serve",
     "build": "webpack",
     "build_plugin": "webpack --config ./tools/webpack.config.plugin.js --color",
-    "copy:android": "cp -f dist/index.js platforms/android/app/src/main/assets/index.js",
-    "copy:ios": "cp -f dist/index.js platforms/ios/assets/index.js",
-    "copy": "npm run copy:android",
+    "copy:android": "cp dist/App.js platforms/android/app/src/main/assets/index.js",
+    "copy:ios": "cp dist/App.js platforms/ios/bundlejs/index.js",
+    "copy": "npm run copy:android && npm run copy:ios",
     "dev": "webpack --config webpack.config.js --watch -d",
     "serve": "webpack-dev-server --config webpack.dev.js --watch --open"
   },
@@ -21,8 +21,11 @@
   "dependencies": {
     "fs-extra": "^4.0.1",
     "vue": "^2.4.3",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0",
     "weex-html5": "^0.4.1",
-    "weex-vue-render": "^0.12.21"
+    "weex-vue-render": "^0.12.27"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
