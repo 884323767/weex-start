@@ -1,9 +1,9 @@
 {
-   "AppName":"WeexApp",
-   "Version":"0.1",
-   "BuildVersion":"0.1.0",
-   "AppId":"",
-   "CodeSign":"",
-   "Profile":"",
-   "WeexBundle":"index.js"
+    "AppName": "WeexApp",
+    "Version": "0.1",
+    "BuildVersion": "0.1.0",
+    "AppId": "lewei.li@qq.com",
+    "CodeSign": "lewei.li",
+    "Profile": "lewei.li",
+    "WeexBundle": "index.js"
 }
