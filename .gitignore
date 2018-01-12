@@ -43,4 +43,6 @@ dist/
 
 Pods/
 
+temp/
+
 .idea/
