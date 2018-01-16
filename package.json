@@ -10,6 +10,7 @@
     "copy:android": "cp dist/App.js platforms/android/app/src/main/assets/dist/index.js",
     "copy:ios": "cp dist/App.js platforms/ios/bundlejs/index.js",
     "copy": "npm run copy:android && npm run copy:ios",
+    "all": "npm run build && npm run copy",
     "dev": "webpack --config webpack.config.js --watch -d",
     "serve": "webpack-dev-server --config webpack.dev.js --watch --open"
   },
