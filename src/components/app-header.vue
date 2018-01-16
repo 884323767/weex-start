@@ -81,13 +81,14 @@ export default {
 
 .nav {
   display: flex;
-  position: absolute;
+  /*position: absolute;*/
+  justify-content: center;
   /*  left: 120px;
 */
   top: 35px;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
   align-items: center;
 }
 
