@@ -4,7 +4,7 @@ import StoriesView from '../views/StoriesView.vue'
 import ArticleView from '../views/ArticleView.vue'
 import CommentView from '../views/CommentView.vue'
 import UserView from '../views/UserView.vue'
-import Ariticle from '../views/Ariticle.vue'
+import Article from '../views/Article.vue'
 
 Vue.use(Router)
 
@@ -27,7 +27,7 @@ export default new Router({
     { path: '/ask', component: createStoriesView('ask') },
     { path: '/job', component: createStoriesView('job') },
     { path: '/articles/:url(.*)?', component: ArticleView },
-    { path: '/article/:id', component: Ariticle },
+    { path: '/article/:id', component: Article },
     { path: '/item/:id(\\d+)', component: CommentView },
     { path: '/user/:id', component: UserView },
     { path: '/', redirect: '/top' }
