@@ -1,13 +1,15 @@
 const stream = weex.requireModule('stream')
-const baseURL = 'https://hacker-news.firebaseio.com/v0'
+// const baseURL = 'https://hacker-news.firebaseio.com/v0'
+const baseURL = 'https://cms.aqumon.com/api/blog_all?language=zh_cn'
 
 export function fetch (path) {
   return new Promise((resolve, reject) => {
     stream.fetch({
       method: 'GET',
-      url: `${baseURL}/${path}.json`,
+      url: `${baseURL}`,
       type: 'json'
     }, (response) => {
+      debugger;
       if (response.status == 200) {
         resolve(response.data)
       }

@@ -22,5 +22,5 @@ Vue.mixin(mixins)
 // here we inject the router and store to all child components,
 // making them available everywhere as `this.$router` and `this.$store`.
 new Vue(Vue.util.extend({ el: '#root', router, store }, App))
-
+// 这里不要的化 APP 打开会默认空白
 router.push('/')

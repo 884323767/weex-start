@@ -7,7 +7,7 @@
     "start": "npm run serve",
     "build": "webpack",
     "build_plugin": "webpack --config ./tools/webpack.config.plugin.js --color",
-    "copy:android": "cp dist/App.js platforms/android/app/src/main/assets/index.js",
+    "copy:android": "cp dist/App.js platforms/android/app/src/main/assets/dist/index.js",
     "copy:ios": "cp dist/App.js platforms/ios/bundlejs/index.js",
     "copy": "npm run copy:android && npm run copy:ios",
     "dev": "webpack --config webpack.config.js --watch -d",

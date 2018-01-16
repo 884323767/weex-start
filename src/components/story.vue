@@ -1,11 +1,19 @@
 <template>
-  <div class="cell-item">
-    <text class="story-score">{{story.score}}</text>
-    <external-link :url="story.url" class="story-link">
+    <div class="cell-item">
+        <div class="zoomimage">
+            <image class="imageItem" v-bind:src="story.banner_image" alt="AQUMON"></image>
+        </div>
+        <text class="news-date">
+            {{story.publish_date}}
+        </text>
+        <text class="news-title">
+            {{story.title}}
+        </text>
+        <!--     <external-link :url="story.url" class="story-link">
       <text class="story-title">{{story.title}}</text>
       <text class="small-text" v-if="story.url">({{ story.url | host }})</text>
-    </external-link>
-    <div class="text-group">
+    </external-link> -->
+        <!--     <div class="text-group">
       <text class="small-text text-cell">by </text>
       <div class="text-cell" @click="jump(`/user/${story.by}`)">
         <text class="small-text link-text">{{story.by}}</text>
@@ -15,19 +23,22 @@
       <div class="text-cell" @click="jump(`/item/${story.id}`)" v-if="!noComment">
         <text class="small-text link-text">{{ story.descendants }} comments</text>
       </div>
+    </div> -->
     </div>
-  </div>
 </template>
-
 <style scoped>
-  .cell-item {
+.cell-item {
     position: relative;
     padding-top: 20px;
     padding-bottom: 25px;
-    padding-left: 100px;
+    padding-left: 40px;
     padding-right: 40px;
-  }
-  .story-score {
+    width: 100%;
+}
+
+
+
+/*.story-score {
     position: absolute;
     width: 100px;
     text-align: center;
@@ -53,7 +64,9 @@
   }
   .link-text {
     /*color: red;*/
-    text-decoration: underline;
+
+
+/*   text-decoration: underline;
   }
   .text-group {
     display: flex;
@@ -64,23 +77,53 @@
   }
   .text-cell {
     flex-grow: 0;
-  }
+  }*/
+
+.news-content {
+    cursor: pointer;
+}
+
+.imageItem {
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+    /*height: 250px;*/
+    background-size: contain;
+}
+
+.news-date {
+    font-size: 22px;
+    color: #a5a29b;
+    letter-spacing: 0.2px;
+    padding-top: 19px;
+    padding-bottom: 15px;
+    white-space: pre-line;
+}
+
+.news-title {
+    width: 100%;
+    font-size: 22px;
+    color: #a5a29b;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    padding-bottom: 5px;
+    white-space: pre-line;
+}
 </style>
-
 <script>
-  import ExternalLink from './external-link.vue'
+import ExternalLink from './external-link.vue'
 
-  export default {
+export default {
     components: { ExternalLink },
     props: {
-      story: {
-        type: Object,
-        required: true
-      },
-      'no-comment': {
-        type: [String, Boolean],
-        default: false
-      }
+        story: {
+            type: Object,
+            required: true
+        },
+        'no-comment': {
+            type: [String, Boolean],
+            default: false
+        }
     }
-  }
+}
 </script>
