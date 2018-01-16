@@ -66,9 +66,9 @@ const plugins = [
    * Description: UglifyJS plugin for webpack
    * See: https://github.com/webpack-contrib/uglifyjs-webpack-plugin
    */
-  new webpack.optimize.UglifyJsPlugin({
-    minimize: true
-  }),
+  // new webpack.optimize.UglifyJsPlugin({
+  //   minimize: true
+  // }),
   /*
    * Plugin: BannerPlugin
    * Description: Adds a banner to the top of each generated chunk.

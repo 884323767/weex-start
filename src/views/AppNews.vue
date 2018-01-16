@@ -39,7 +39,7 @@
   </div>
 </template>
 <script>
-import blog from "../services/blog.js";
+// import blog from "../services/blog.js";
 const ARTICLE_LENGTH = 6;
 export default {
   data() {
