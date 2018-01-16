@@ -47,20 +47,17 @@
 
     methods: {
       goArticle(id) {
-        debugger;
         this.$router.push('article/'+id);
       },
       fetchListData () {
         this.loading = true
         const baseURL = 'https://cms.aqumon.com/api/blog_all?language=zh_cn'
-        debugger;
 
         stream.fetch({
           method: 'GET',
           url: `${baseURL}`,
           type: 'json'
         }, (response) => {
-          debugger;
           if (response.status == 200) {
             console.log(response.data);
             let result = response.data;

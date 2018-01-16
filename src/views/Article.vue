@@ -42,7 +42,6 @@ export default {
     };
   },
   created() {
-    debugger;
     //  这里报错, 也没用到，暂时注释掉
     // addthis api script
     // let addthis = document.createElement('script');
@@ -89,7 +88,6 @@ export default {
   },
   methods: {
     goBack() {
-      debugger;
       this.$router.back();
     },
     init() {
@@ -102,7 +100,6 @@ export default {
         url: `${baseURL}`,
         type: 'json'
       }, (response) => {
-        debugger;
         if (response.status == 200) {
           console.log(response.data);
           let result = response.data;
@@ -127,7 +124,6 @@ export default {
 
     },
     mounted() {
-      debugger;
       this.$nextTick(() => {
         // this.language = this.languageMap[this.$i18n.locale];
         this.init();

@@ -9,7 +9,6 @@ export function fetch (path) {
       url: `${baseURL}`,
       type: 'json'
     }, (response) => {
-      debugger;
       if (response.status == 200) {
         resolve(response.data)
       }

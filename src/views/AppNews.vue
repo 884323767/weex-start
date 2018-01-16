@@ -100,7 +100,6 @@ export default {
       this.backToTop();
     },
     loadMore() {
-      //  debugger
       // 点击导航栏不同类型，进入不同类型的加载更多
       // 每次点击加载更多，加载长度加6
       switch (this.menuActive) {
@@ -112,7 +111,6 @@ export default {
           this.articles = this.allNews.slice(0, this.allNewsLen);
           break;
         case 2:
-          // debugger
           this.newsLen = this.newsLen + ARTICLE_LENGTH;
           if (this.newsLen >= this.news.length) {
             this.showLoadMore = false;
