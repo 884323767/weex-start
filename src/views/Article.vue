@@ -89,7 +89,8 @@ export default {
   },
   methods: {
     goBack() {
-      this.$route.back();
+      debugger;
+      this.$router.back();
     },
     init() {
       const self = this;
@@ -140,12 +141,18 @@ export default {
 .app-article {
 
 }
+.back {
+  font-size: 24px;
+  color: #ff6624;
+  margin-left: 30px;
+  margin-top: 20px;
+}
 .title {
   font-size: 24px;
   color: #000000;
   letter-spacing: 0;
   text-align: left;
-  margin: 61px 27px 0px 27px;
+  margin: 40px 27px 0px 27px;
   white-space: normal;
 }
 .authors {
