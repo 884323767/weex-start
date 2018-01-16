@@ -19,7 +19,7 @@ function createStoriesView (type) {
 }
 
 export default new Router({
-  // mode: 'abstract',
+  mode: 'abstract',
   routes: [
     { path: '/top', component: createStoriesView('top') },
     { path: '/new', component: createStoriesView('new') },

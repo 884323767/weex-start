@@ -47,6 +47,7 @@
 
     methods: {
       goArticle(id) {
+        debugger;
         this.$router.push('article/'+id);
       },
       fetchListData () {
